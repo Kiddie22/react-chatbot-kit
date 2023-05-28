@@ -21,7 +21,6 @@ import {
 } from '../../interfaces/IConfig';
 import { IMessage } from '../../interfaces/IMessages';
 import { string } from 'prop-types';
-import { GrammarlyEditorPlugin } from '@grammarly/editor-sdk-react';
 
 interface IChatProps {
   setState: React.Dispatch<SetStateAction<any>>;
@@ -309,15 +308,13 @@ const Chat = ({
             className="react-chatbot-kit-chat-input-form"
             onSubmit={handleSubmit}
           >
-            <GrammarlyEditorPlugin clientId="client_TBmjZehXSLcvMY6yn55afn">
-              <input
-                className="react-chatbot-kit-chat-input"
-                placeholder={placeholder}
-                value={input}
-                onChange={(e) => setInputValue(e.target.value)}
-                spellCheck="true"
-              />
-            </GrammarlyEditorPlugin>
+            <input
+              className="react-chatbot-kit-chat-input"
+              placeholder={placeholder}
+              value={input}
+              onChange={(e) => setInputValue(e.target.value)}
+              spellCheck="true"
+            />
             <button
               className="react-chatbot-kit-chat-btn-send"
               style={customButtonStyle}
