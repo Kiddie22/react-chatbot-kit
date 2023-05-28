@@ -315,6 +315,7 @@ const Chat = ({
                 placeholder={placeholder}
                 value={input}
                 onChange={(e) => setInputValue(e.target.value)}
+                spellCheck="true"
               />
             </GrammarlyEditorPlugin>
             <button
